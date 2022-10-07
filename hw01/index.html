@@ -155,14 +155,14 @@
         text-shadow: 0 0 6px #FFFFFF, 0 0 6px #000000;
     }
 
-    img:hover {
+    /* img:hover {
       
         box-shadow: 0 0 1px 1px #f9eced;
       
         animation-name: happy;
         animation-duration: 0.5s;
         animation-iteration-count: infinite;
-    }
+    } */
 
     @keyframes happy {
         0% {
@@ -195,6 +195,7 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
+      <img src="../homepage.png" width="50px" height="50px" style="float: right; " onclick="Home();">
       <h1>作業 01</h1>
     </div>
   </div>
@@ -261,6 +262,10 @@
 
 
 <script>
+  function Home(){
+    window.location = '../hw00/index.html';
+  }
+
   $(function() {
     var f = function() {
       $(this).next().text($(this).is(':checked') ? '做完' : '未做完');
