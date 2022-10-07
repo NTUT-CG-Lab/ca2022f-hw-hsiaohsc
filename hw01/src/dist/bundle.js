@@ -9431,11 +9431,11 @@ exports.GearImageName = 'icon_gear.png';
 exports.PowerImageName = 'CloseNormal.png';
 exports.ModelDir = [
     // 'Haru',
+    'tororo',
     'miara_pro_t03',
     // 'koharu',
     // 'unitychan',
     // 'Epsilon',
-    // 'tororo'
 ];
 exports.ModelDirSize = exports.ModelDir.length;
 exports.MotionGroupIdle = 'Idle';
@@ -9580,8 +9580,8 @@ var LAppDelegate = (function () {
                 return;
             }
             lapppal_1.LAppPal.updateTime();
-            // exports.gl.clearColor(0.0, 0.0, 0.0, 1.0);
-            exports.gl.clearColor(0.0, 0.0, 0.0, 0.0);
+            exports.gl.clearColor(0.0, 0.0, 0.0, 1.0);
+            // exports.gl.clearColor(0.0, 0.0, 0.0, 0.0);
             exports.gl.enable(exports.gl.DEPTH_TEST);
             exports.gl.depthFunc(exports.gl.LEQUAL);
             exports.gl.clear(exports.gl.COLOR_BUFFER_BIT | exports.gl.DEPTH_BUFFER_BIT);
