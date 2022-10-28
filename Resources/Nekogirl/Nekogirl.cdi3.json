@@ -1,0 +1,430 @@
+{
+	"Version": 3,
+	"Parameters": [
+		{
+			"Id": "ParamAngleX",
+			"GroupId": "ParamGroup",
+			"Name": "角度 X"
+		},
+		{
+			"Id": "ParamAngleY",
+			"GroupId": "ParamGroup",
+			"Name": "角度 Y"
+		},
+		{
+			"Id": "ParamAngleZ",
+			"GroupId": "ParamGroup",
+			"Name": "角度 Z"
+		},
+		{
+			"Id": "ParamEyeLOpen",
+			"GroupId": "ParamGroup",
+			"Name": "左目　開閉"
+		},
+		{
+			"Id": "ParamEyeROpen",
+			"GroupId": "ParamGroup",
+			"Name": "右目　開閉"
+		},
+		{
+			"Id": "ParamEyeBallX",
+			"GroupId": "ParamGroup",
+			"Name": "目玉 X"
+		},
+		{
+			"Id": "ParamEyeBallY",
+			"GroupId": "ParamGroup",
+			"Name": "目玉 Y"
+		},
+		{
+			"Id": "ParamBrowLForm",
+			"GroupId": "ParamGroup",
+			"Name": "左眉　変形"
+		},
+		{
+			"Id": "ParamBrowRForm",
+			"GroupId": "ParamGroup",
+			"Name": "右眉　変形"
+		},
+		{
+			"Id": "ParamMouthForm",
+			"GroupId": "ParamGroup",
+			"Name": "口　変形"
+		},
+		{
+			"Id": "ParamMouthOpenY",
+			"GroupId": "ParamGroup",
+			"Name": "口　開閉"
+		},
+		{
+			"Id": "ParamBodyAngleZ",
+			"GroupId": "ParamGroup",
+			"Name": "体の回転　Z"
+		},
+		{
+			"Id": "ParamBreath",
+			"GroupId": "ParamGroup",
+			"Name": "呼吸"
+		},
+		{
+			"Id": "ParamCheek",
+			"GroupId": "ParamGroup2",
+			"Name": "照れ"
+		},
+		{
+			"Id": "Paramaozame",
+			"GroupId": "ParamGroup2",
+			"Name": "青ざめ"
+		},
+		{
+			"Id": "Paramkirakira",
+			"GroupId": "ParamGroup2",
+			"Name": "キラキラ目"
+		},
+		{
+			"Id": "Paramoff",
+			"GroupId": "ParamGroup2",
+			"Name": "ハイライトオフ"
+		},
+		{
+			"Id": "Param4",
+			"GroupId": "ParamGroup3",
+			"Name": "ハイライトの揺れ左"
+		},
+		{
+			"Id": "Param3",
+			"GroupId": "ParamGroup3",
+			"Name": "ハイライトの揺れ右"
+		},
+		{
+			"Id": "Param28",
+			"GroupId": "ParamGroup3",
+			"Name": "猫耳根元"
+		},
+		{
+			"Id": "Param30",
+			"GroupId": "ParamGroup3",
+			"Name": "猫耳先"
+		},
+		{
+			"Id": "Param5",
+			"GroupId": "ParamGroup3",
+			"Name": "猫耳右根元新"
+		},
+		{
+			"Id": "Param2",
+			"GroupId": "ParamGroup3",
+			"Name": "右猫耳先新"
+		},
+		{
+			"Id": "Param31",
+			"GroupId": "ParamGroup3",
+			"Name": "右まつ毛揺れ"
+		},
+		{
+			"Id": "Param32",
+			"GroupId": "ParamGroup3",
+			"Name": "左まつ毛揺れ"
+		},
+		{
+			"Id": "Param11",
+			"GroupId": "ParamGroup3",
+			"Name": "横髪根元揺れ"
+		},
+		{
+			"Id": "Param13",
+			"GroupId": "ParamGroup3",
+			"Name": "横先揺れ"
+		},
+		{
+			"Id": "Param12",
+			"GroupId": "ParamGroup3",
+			"Name": "こめかみ先揺れ"
+		},
+		{
+			"Id": "Param20",
+			"GroupId": "ParamGroup3",
+			"Name": "横上下揺れ"
+		},
+		{
+			"Id": "Param14",
+			"GroupId": "ParamGroup3",
+			"Name": "右ツインテ根元"
+		},
+		{
+			"Id": "Param15",
+			"GroupId": "ParamGroup3",
+			"Name": "右ツインテ真ん中"
+		},
+		{
+			"Id": "Param16",
+			"GroupId": "ParamGroup3",
+			"Name": "右ツインテ先"
+		},
+		{
+			"Id": "Param17",
+			"GroupId": "ParamGroup3",
+			"Name": "後ろ根元"
+		},
+		{
+			"Id": "Param18",
+			"GroupId": "ParamGroup3",
+			"Name": "後ろ先"
+		},
+		{
+			"Id": "Param10",
+			"GroupId": "ParamGroup3",
+			"Name": "前髪根元揺れ"
+		},
+		{
+			"Id": "Param7",
+			"GroupId": "ParamGroup3",
+			"Name": "前髪真ん中先"
+		},
+		{
+			"Id": "Param9",
+			"GroupId": "ParamGroup3",
+			"Name": "前髪左先"
+		},
+		{
+			"Id": "Param8",
+			"GroupId": "ParamGroup3",
+			"Name": "前髪右先"
+		},
+		{
+			"Id": "Param19",
+			"GroupId": "ParamGroup3",
+			"Name": "前髪上下揺れ"
+		},
+		{
+			"Id": "Param21",
+			"GroupId": "ParamGroup3",
+			"Name": "右リボン上"
+		},
+		{
+			"Id": "Param23",
+			"GroupId": "ParamGroup3",
+			"Name": "右リボン下"
+		},
+		{
+			"Id": "Param22",
+			"GroupId": "ParamGroup3",
+			"Name": "左リボン上"
+		},
+		{
+			"Id": "Param24",
+			"GroupId": "ParamGroup3",
+			"Name": "左リボン下"
+		},
+		{
+			"Id": "Param25",
+			"GroupId": "ParamGroup3",
+			"Name": "ネクタイ"
+		},
+		{
+			"Id": "Param26",
+			"GroupId": "ParamGroup3",
+			"Name": "服根元"
+		},
+		{
+			"Id": "Param27",
+			"GroupId": "ParamGroup3",
+			"Name": "服下"
+		},
+		{
+			"Id": "Param29",
+			"GroupId": "ParamGroup3",
+			"Name": "胸上下"
+		},
+		{
+			"Id": "Param",
+			"GroupId": "ParamGroup3",
+			"Name": "身体x"
+		}
+	],
+	"ParameterGroups": [
+		{
+			"Id": "ParamGroup",
+			"GroupId": "",
+			"Name": "基本パラメータ"
+		},
+		{
+			"Id": "ParamGroup2",
+			"GroupId": "",
+			"Name": "キー操作"
+		},
+		{
+			"Id": "ParamGroup3",
+			"GroupId": "",
+			"Name": "物理演算"
+		}
+	],
+	"Parts": [
+		{
+			"Id": "Part",
+			"Name": "下描き"
+		},
+		{
+			"Id": "Part7",
+			"Name": "モデル本体"
+		},
+		{
+			"Id": "Part2",
+			"Name": "表情下描き"
+		},
+		{
+			"Id": "Part5",
+			"Name": "揺れの下描き"
+		},
+		{
+			"Id": "Part6",
+			"Name": "身体の動き下描き"
+		},
+		{
+			"Id": "Part8",
+			"Name": "前髪上"
+		},
+		{
+			"Id": "Part9",
+			"Name": "右目"
+		},
+		{
+			"Id": "Part11",
+			"Name": "左目"
+		},
+		{
+			"Id": "Part13",
+			"Name": "手前髪"
+		},
+		{
+			"Id": "Part15",
+			"Name": "髪の影"
+		},
+		{
+			"Id": "Part16",
+			"Name": "その他顔系パーツ"
+		},
+		{
+			"Id": "Part21",
+			"Name": "口"
+		},
+		{
+			"Id": "Part22",
+			"Name": "輪郭"
+		},
+		{
+			"Id": "Part23",
+			"Name": "胴体"
+		},
+		{
+			"Id": "Part24",
+			"Name": "右腕"
+		},
+		{
+			"Id": "Part25",
+			"Name": "左腕"
+		},
+		{
+			"Id": "Part26",
+			"Name": "足"
+		},
+		{
+			"Id": "Part27",
+			"Name": "ツインテ右側"
+		},
+		{
+			"Id": "Part31",
+			"Name": "ツインテ左側"
+		},
+		{
+			"Id": "Part35",
+			"Name": "斜め後ろ髪"
+		},
+		{
+			"Id": "Part3",
+			"Name": "口の下描き"
+		},
+		{
+			"Id": "Part4",
+			"Name": "目の下描き"
+		},
+		{
+			"Id": "Part10",
+			"Name": "メインまつ毛 のコピー"
+		},
+		{
+			"Id": "Part12",
+			"Name": "メインまつ毛"
+		},
+		{
+			"Id": "Part14",
+			"Name": "横髪"
+		},
+		{
+			"Id": "Part17",
+			"Name": "鼻"
+		},
+		{
+			"Id": "Part18",
+			"Name": "頬"
+		},
+		{
+			"Id": "Part19",
+			"Name": "目の周り右"
+		},
+		{
+			"Id": "Part20",
+			"Name": "目の周り左"
+		},
+		{
+			"Id": "Part28",
+			"Name": "リボン表 のコピー"
+		},
+		{
+			"Id": "Part29",
+			"Name": "ツインテ のコピー"
+		},
+		{
+			"Id": "Part30",
+			"Name": "リボン裏 のコピー"
+		},
+		{
+			"Id": "Part32",
+			"Name": "リボン表"
+		},
+		{
+			"Id": "Part33",
+			"Name": "ツインテ"
+		},
+		{
+			"Id": "Part34",
+			"Name": "リボン裏"
+		}
+	],
+	"CombinedParameters": [
+		[
+			"ParamAngleX",
+			"ParamAngleY"
+		],
+		[
+			"ParamMouthForm",
+			"ParamMouthOpenY"
+		],
+		[
+			"Param28",
+			"Param30"
+		],
+		[
+			"Param11",
+			"Param13"
+		],
+		[
+			"Param17",
+			"Param18"
+		],
+		[
+			"Param10",
+			"Param7"
+		]
+	]
+}

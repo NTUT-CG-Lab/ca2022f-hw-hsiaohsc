@@ -1,0 +1,42 @@
+{
+	"Version": 3,
+	"FileReferences": {
+		"Moc": "Nekogirl.moc3",
+		"Textures": [
+			"textures/texture_00.png"
+		],
+		"Physics": "Nekogirl.physics3.json",
+		"DisplayInfo": "Nekogirl.cdi3.json",
+		"Expressions": [
+			{
+				"Name": "aozame",
+				"File": "face/aozame.exp3.json"
+			},
+			{
+				"Name": "cheek",
+				"File": "face/cheek.exp3.json"
+			},
+			{
+				"Name": "kirakira",
+				"File": "face/kirakira.exp3.json"
+			},
+			{
+				"Name": "off",
+				"File": "face/off.exp3.json"
+			}
+		]
+	},
+	"Groups": [
+		{
+			"Target": "Parameter",
+			"Name": "LipSync",
+			"Ids": []
+		},
+		{
+			"Target": "Parameter",
+			"Name": "EyeBlink",
+			"Ids": []
+		}
+	],
+	"HitAreas": []
+}

@@ -10394,18 +10394,13 @@ exports.ViewLogicalMaxLeft = -2.0;
 exports.ViewLogicalMaxRight = 2.0;
 exports.ViewLogicalMaxBottom = -2.0;
 exports.ViewLogicalMaxTop = 2.0;
-exports.ResourcesPath = './Resources/';
+exports.ResourcesPath = '../../Resources/';
 exports.BackImageName = 'back_class_normal.png';
 exports.GearImageName = 'icon_gear.png';
 exports.PowerImageName = 'CloseNormal.png';
 exports.ModelDir = [
-    'www2',
-    'Haru',
-    'Hiyori',
-    'Mark',
-    'Natori',
-    'Rice',
-    'Mao'
+    'Nekogirl',
+    // 'www2',
 ];
 exports.ModelDirSize = exports.ModelDir.length;
 exports.MotionGroupIdle = 'Idle';
