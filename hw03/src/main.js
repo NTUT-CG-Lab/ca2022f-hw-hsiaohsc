@@ -48,3 +48,5 @@ document.querySelector('.Sliders').addEventListener('change', e => {
     view.baseY = 0;
   });
 });
+
+

@@ -10,13 +10,28 @@
           overflow: hidden;
       }
       h4, span{
-        font-size: 10px !important;
+        font-size: 16px !important;
       }
       .Sliders{
         position: absolute !important;
         top: 20px;
         left: 150px;
-        background: rgba(0,0,0,0.3);
+        background: rgba(255,255,255,0.3);
+      }
+      .stdParam{
+        position: absolute !important;
+        top: 20px;
+        right: 50px;
+      }
+      .speParam{
+        position: absolute !important;
+        top: 220px;
+        right: 50px;
+      }
+      .box{
+        border:1px black solid;
+        padding: 10px;
+        background: rgba(255,255,255,0.3);
       }
     </style>
   
@@ -26,6 +41,7 @@
     <script src="../../Core/live2dcubismcore.js"></script>
     <!-- Build script -->
     <script src="./dist/bundle.js"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   </head>
   <body>
     <img src="../../back.png" title="上一頁" alt="Go Back" width="50px" height="50px" style="position: absolute; padding:20px;" onclick="Back();">
@@ -81,15 +97,191 @@
         </div>
       </div>
     </div>
+
+    <div class="stdParam">
+      <h3 style="margin-bottom: 5px;">標準參數</h3>
+      <div class="box">
+        <label id="stdName">參數名稱：</label>
+        <br><br>
+        <label for="stdMin">最小值：</label><input id="stdMin" size="3" value="-1">
+        <input id="stdSlider" type="range" step="0.1" min="-1" max="1" value="0">
+        <label for="stdMax">最大值：</label><input id="stdMax" size="3" value="1">
+        <br><br>
+        <select id="stdSelect">
+          <option value="0">---請選擇---</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="speParam">
+      <h3 style="margin-bottom: 5px;">特定參數</h3>
+      <div class="box">
+        <label id="speName">參數名稱：</label>
+        <br><br>
+        <label for="speMin">最小值：</label><input id="speMin" size="3" value="0">
+        <input id="speSlider" type="range" step="0.1" min="0" max="1" value="0">
+        <label for="speMax">最大值：</label><input id="speMax" size="3" value="1">
+        <br><br>
+        <select id="speSelect">
+          <option value="0">---請選擇---</option>
+        </select>
+      </div>
+    </div>
   
-    <script src="main.js"></script>
+    <!-- <script src="main.js"></script> -->
     <script>
 
       function Back(){
-        // console.log("Clicked!!!");
         window.location="../index.html";
       }
+
+      // 選單
+      const stdSelect = document.getElementById("stdSelect");
+      const speSelect = document.getElementById("speSelect");
+
+      // Label
+      const stdName = document.getElementById("stdName");
+      const speName = document.getElementById("speName");
+
+      const stdMin = document.getElementById("stdMin");
+      const stdMax = document.getElementById("stdMax");
+      const stdSlider = document.getElementById("stdSlider");
+      const speMin = document.getElementById("speMin");
+      const speMax = document.getElementById("speMax");
+      const speSlider = document.getElementById("speSlider");
+
+      // 標準參數: 最大值、最小值、初始值、目前狀態值
+      const stdParams = {
+        'ParamAngleX':{'max':30, 'min':-30, 'start':0, 'cur':0}, 'ParamAngleY':{'max':30, 'min':-30, 'start':0, 'cur':0}, 'ParamAngleZ':{'max':30, 'min':-30, 'start':0, 'cur':0}, 
+        'ParamEyeLOpen':{'max':1, 'min':0, 'start':1, 'cur':1}, 'ParamEyeLSmile':{'max':1, 'min':0, 'start':0, 'cur':0}, 'ParamEyeROpen':{'max':1, 'min':0, 'start':1, 'cur':1}, 'ParamEyeRSmile':{'max':1, 'min':0, 'start':0, 'cur':0}, 
+        'ParamEyeBallX':{'max':1, 'min':-1, 'start':0, 'cur':0}, 'ParamEyeBallY':{'max':1, 'min':-1, 'start':0, 'cur':0}, 'ParamEyeBallForm':{'max':1, 'min':-1, 'start':0, 'cur':0}, 
+        'ParamBrowLY':{'max':1, 'min':-1, 'start':0, 'cur':0}, 'ParamBrowRY':{'max':1, 'min':-1, 'start':0, 'cur':0}, 'ParamBrowLX':{'max':1, 'min':-1, 'start':0, 'cur':0}, 'ParamBrowRX':{'max':1, 'min':-1, 'start':0, 'cur':0}, 'ParamBrowLAngle':{'max':1, 'min':-1, 'start':0, 'cur':0}, 'ParamBrowRAngle':{'max':1, 'min':-1, 'start':0, 'cur':0}, 'ParamBrowLForm':{'max':1, 'min':-1, 'start':0, 'cur':0}, 'ParamBrowRForm':{'max':1, 'min':-1, 'start':0, 'cur':0}, 
+        'ParamMouthForm':{'max':1, 'min':-1, 'start':0, 'cur':0}, 'ParamMouthOpenY':{'max':1, 'min':0, 'start':0, 'cur':0}, 'ParamCheek':{'max':1, 'min':0, 'start':0, 'cur':0},
+        'ParamBodyAngleX':{'max':10, 'min':-10, 'start':0, 'cur':0}, 'ParamBodyAngleY':{'max':10, 'min':-10, 'start':0, 'cur':0}, 'ParamBodyAngleZ':{'max':10, 'min':-10, 'start':0, 'cur':0}, 'ParamBreath':{'max':1, 'min':0, 'start':0, 'cur':0}, 
+        'ParamArmLA':{'max':30, 'min':-30, 'start':0, 'cur':0}, 'ParamArmRA':{'max':30, 'min':-30, 'start':0, 'cur':0}, 'ParamArmLB':{'max':30, 'min':-30, 'start':0, 'cur':0}, 'ParamArmRB':{'max':30, 'min':-30, 'start':0, 'cur':0}, 
+        'ParamHandL':{'max':10, 'min':-10, 'start':0, 'cur':0}, 'ParamHandR':{'max':10, 'min':-10, 'start':0, 'cur':0},
+        'ParamHairFront':{'max':1, 'min':-1, 'start':0, 'cur':0}, 'ParamHairSide':{'max':1, 'min':-1, 'start':0, 'cur':0}, 'ParamHairBack':{'max':1, 'min':-1, 'start':0, 'cur':0}, 'ParamHairFluffy':{'max':1, 'min':-1, 'start':0, 'cur':0}, 
+        'ParamShoulderY':{'max':10, 'min':-10, 'start':0, 'cur':0},
+        'ParamBustX':{'max':1, 'min':-1, 'start':0, 'cur':0}, 'ParamBustY':{'max':1, 'min':-1, 'start':0, 'cur':0}, 'ParamBaseX':{'max':10, 'min':-10, 'start':0, 'cur':0}, 'ParamBaseY':{'max':10, 'min':-10, 'start':0, 'cur':0}
+      };
+
       
+      // 讀出角色所有參數
+      $.getJSON("../../Resources/Haru/Haru.cdi3.json", function(data) {
+        data.Parameters.forEach(element => {
+          
+          let option = document.createElement("option");
+          option.text = element.Id;
+          option.value = element.Id;
+          if(element.Id in stdParams)
+            stdSelect.appendChild(option);
+          else
+            speSelect.appendChild(option);
+        });
+        
+      })
+
+      // 下拉式選單選擇標準參數
+      stdSelect.addEventListener('change', function(){
+        let name = stdSelect.value;
+        // 設定參數名稱與最大最小值
+        stdName.innerHTML = "參數名稱：" + name;
+        stdMin.value = stdSlider.min = stdParams[name].min;
+        stdMax.value = stdSlider.max = stdParams[name].max;
+
+        stdSlider.value = stdParams[name].cur;  // 讀出參數紀錄設定滑桿位置
+      });
+
+      // 下拉式選單選擇特定參數
+      speSelect.addEventListener('change', function(){
+        speName.innerHTML = "參數名稱：" + speSelect.value;
+
+        speSlider.value = 0;
+      });
+
+      // 拉動標準參數滑桿
+      stdSlider.addEventListener('input', function(){
+        if(stdSelect.value == 0) return;
+        let val = stdSlider.value;
+        let name = stdSelect.value;
+        let par = name[5].toLowerCase() + name.substring(6);  // e.g. ParamAngleX => angleX
+
+        // 更新左側滑桿
+        if(['ParamAngleX', 'ParamAngleY', 'ParamAngleZ', 'ParamBrowLY', 'ParamBrowRY', 'ParamBrowLX', 'ParamBrowRX'].includes(name)){
+          document.getElementById(name).value = val;
+        }
+
+        // 更新參數紀錄
+        stdParams[name].cur = val;
+
+        // 更新模型參數
+        runModel(view => {
+          view[par] = val;
+        });
+      });
+
+      // 改變標準參數最小值
+      stdMin.addEventListener('change', function(){
+        if(stdSelect.value == 0) return;
+        if(stdMin.value < stdParams[stdSelect.value].min || stdMin.value > stdParams[stdSelect.value].max){
+          alert("超出範圍！");
+          stdMin.value = stdParams[stdSelect.value].min;
+          return;
+        }
+        stdSlider.min = stdMin.value;
+      });
+
+      // 改變標準參數最大值
+      stdMax.addEventListener('change', function(){
+        if(stdSelect.value == 0) return;
+        if(stdMax.value < stdParams[stdSelect.value].min || stdMax.value > stdParams[stdSelect.value].max){
+          alert("超出範圍！");
+          stdMax.value = stdParams[stdSelect.value].max
+          return;
+        }
+        stdSlider.max = stdMax.value;
+      });
+
+      // 改變特定參數最小值
+      speMin.addEventListener('change', function(){
+        if(speSelect.value == 0) return;
+        speSlider.min = speMin.value;
+      });
+
+      // 改變特定參數最大值
+      speMax.addEventListener('change', function(){
+        if(speSelect.value == 0) return;
+        speSlider.max = speMax.value;
+      });
+
+      // 拉動特定參數滑桿
+      speSlider.addEventListener('input', function(){
+        if(speSelect.value == 0) return;
+        let val = speSlider.value;
+        let name = speSelect.value;
+        let par = name[5].toLowerCase() + name.substring(6);
+
+        // 更新模型參數
+        runModel(view => {
+          view[par] = val;
+        });
+      });
+
+      // Medium baseline
+      document.querySelector('.Sliders').addEventListener('input', e => {
+        let val = parseFloat(e.target.value);
+        let id = e.target.id;
+        let par = id[5].toLowerCase() + id.substring(6);  // e.g. ParamAngleX => angleX
+
+        // 更新參數紀錄
+        stdParams[id].cur = val;
+
+        // 更新模型參數
+        runModel(view => {
+          view[par] = val;
+        });
+      });
+
       
     </script>
   </body>

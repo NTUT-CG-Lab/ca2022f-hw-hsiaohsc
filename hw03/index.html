@@ -211,9 +211,11 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      這次作業主要學習如何使用 Web SDK 來操作人物的位置以及大小、調整畫布大小以及拖拉檔案切換背景。
-      第一次接觸 typescript 稍微研究了一下才成功完成 strong baseline 要求的 window.update 函數。
-      改成使用 update 函數之後，背景就不再隨著人物一起移動了。另外還補上了防呆，防止人物的放大係數小於或等於 0。
+      這次作業主要學習如何取出人物的控制參數來操作人物頭的擺動、五官移動等等控制。
+      這次需要重新使用 CubismWebSamples 來製作並build，藉由在 typescript 註冊並設定參數來達到可以控制改變參數的功能。
+      在製作strong baseline時，也實作記錄參數狀態的功能，在選擇參數時會讀出參數目前的數值，若選擇的參數與左方medium baseline參數相同，也會一併改變顯示。
+      <br>
+      人物可能在新竹XDD 由於在調整參數固定人物動作時，人物預設的輪播動畫沒有停止的關係，在某些角度會造成人物的頭髮不斷顫動，看起來場景裡好像有風的樣子。
     </div>
   </div>
 
@@ -228,35 +230,25 @@
           <th>分項描述</th>
         </tr>
         <tr>
-          <td rowspan="7" id="myTotal"></td>
+          <td rowspan="7" id="myTotal">10</td>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
-          <td id='m1'>0</td>
-          <td>Simple Baseline: 下載作業程式並且執行安裝</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
-          <td id='m2'>1</td>
-          <td>Simple Baseline: 設定畫布寬高</td>
+          <td id='m1'>3</td>
+          <td>Simple Baseline: 綁定參數 (AngleX、AngleY、AngleZ)</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
-          <td id='m3'>3</td>
-          <td>Medium Baseline: 補上對人物的上下左右縮放的程式碼</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
-          <td id='m4'>4</td>
-          <td>Medium Baseline: 補上拖拉切換背景的程式碼</td>
+          <td id='m2'>4</td>
+          <td>Medium Baseline: 綁定參數 (BrowLY、BrowRY、BrowLX、BrowRX)</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox5" checked ></td>
-          <td id='m5'>1</td>
-          <td>Strong Baseline: 錄製一段1920*1080影片(操控上下左右縮放、換背景)，上傳網頁至github classroom</td>
+          <td id='m3'>2</td>
+          <td>Strong Baseline: 標準參數、特定參數控制</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox6" checked /></td>
-          <td id='m6'>1</td>
-          <td>Strong Baseline: 藉由查看typescript程式碼學習如何調用window.update函數</td>
+          <td id='m4'>1</td>
+          <td>Strong Baseline: 觸碰身體會發出聲音</td>
         </tr>
       </table>
     </div>
