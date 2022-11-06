@@ -195,7 +195,8 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      <h1>作業 01</h1>
+      <img src="../homepage.png" title="回作業總表" width="50px" height="50px" style="float: right; " onclick="parent.location='../hw00/index.html'">
+      <h1>作業 05</h1>
     </div>
   </div>
 
@@ -203,13 +204,15 @@
   <div class="row hw12">
     <div class="col-md-12 twenty">
       作業程式碼，請放在 src 檔案夾。
+      <input type="button" name="back" onclick="parent.location='./src/index.html?model=mediapipe_face_mesh'" value="...按我...按我...按我...">
     </div>
   </div>
 
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。
+      這次作業需要將 mediapipe 的 tensorflow.js 版臉部偵測的功能結合 Cubism 人物的臉部神經，控制 Cubism 人物的點頭、搖頭與眼睛、眉毛、嘴巴。我覺得最困難的地方在於
+      mediapipe 的臉部偵測網格數值不斷地在大幅度快速跳動，要去尋找到一個穩定的數值來做計算比較困難，試了很久一直在鏡頭前擠眉弄眼，臉部肌肉也是滿辛苦的XD
     </div>
   </div>
 
@@ -225,39 +228,39 @@
         </tr>
         <tr>
           <td rowspan="7" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
-          <td id='m1'>1</td>
-          <td>描述</td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
+          <td id='m1'>0</td>
+          <td>Simple baseline: Face-Landmarks-Detection 與 Cubism 呈現於網頁上</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
           <td id='m2'>1</td>
-          <td>描述</td>
+          <td>Simple baseline: Cubism角色眉毛對接</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
-          <td id='m3'>1</td>
-          <td>描述</td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
+          <td id='m3'>2</td>
+          <td>Medium baseline: Cubism角色左右擺頭</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
-          <td id='m4'>1</td>
-          <td>描述</td>
+          <td id='m4'>2</td>
+          <td>Medium baseline: Cubism角色上下點頭</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox5" checked="checked" ></td>
-          <td id='m5'>2</td>
-          <td>描述</td>
+          <td id='m5'>1</td>
+          <td>Medium baseline: Cubism角色眼睛開闔</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox6" checked="checked" /></td>
           <td id='m6'>2</td>
-          <td>描述</td>
+          <td>Strong baseline: Cubism角色歪頭</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox7" checked="checked" /></td>
           <td id='m7'>2</td>
-          <td>描述</td>
+          <td>Strong baseline: Cubism角色嘴巴開闔</td>
         </tr>
       </table>
     </div>
