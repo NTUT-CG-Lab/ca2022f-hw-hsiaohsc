@@ -97424,9 +97424,9 @@ class Camera {
 
       /*上下點頭*/
       //抖動
-      // view.angleY = (f.keypoints[151].z-f.keypoints[175].z)*2;
+      view.angleY = (f.keypoints[151].z-f.keypoints[175].z)*2;
       //穩定
-      view.angleY = (f.keypoints[168].y-250)/100*30*(-1);
+      // view.angleY = (f.keypoints[168].y-250)/100*30*(-1);
 
       /*歪頭*/
       view.angleZ = (f.keypoints[127].y-f.keypoints[356].y);
