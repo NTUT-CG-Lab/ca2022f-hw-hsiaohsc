@@ -195,7 +195,8 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      <h1>作業 01</h1>
+      <img src="../homepage.png" title="回作業總表" width="50px" height="50px" style="float: right; " onclick="parent.location='../hw00/index.html'">
+      <h1>作業 06</h1>
     </div>
   </div>
 
@@ -203,13 +204,15 @@
   <div class="row hw12">
     <div class="col-md-12 twenty">
       作業程式碼，請放在 src 檔案夾。
+      <input type="button" name="back" onclick="parent.location='./src/index.html'" value="...按我...按我...按我...">
     </div>
   </div>
 
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。
+      這次作業需要將 mediapipe 的 tensorflow.js 版臉部偵測的功能結合 Cubism 人物，搭配 OBS 完成說故事直播。在做直播的時候，同時開啟Demo頁面、ppt、OBS與youtube直播，
+      我想主要是OBS的視窗擷取跟去綠幕功能，會導致筆電很當，直播的時候，人物的動作都有延遲的情況，後來換設備狀況才改善。看來要做好直播必須先有好設備XD
     </div>
   </div>
 
@@ -224,40 +227,30 @@
           <th>分項描述</th>
         </tr>
         <tr>
-          <td rowspan="7" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
+          <td rowspan="7" id="myTotal">10</td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
           <td id='m1'>1</td>
-          <td>描述</td>
+          <td>Simple baseline: 安裝OBS Studio</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
           <td id='m2'>1</td>
-          <td>描述</td>
+          <td>Medium baseline: 修改Live2D人物大小並上傳專案到作品集的src,並有按鈕連結至Demo網站</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
           <td id='m3'>1</td>
-          <td>描述</td>
+          <td>Medium baseline: 設置 OBS 畫面 (有Live2D人物、直播背景視窗及音訊擷取)</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
           <td id='m4'>1</td>
-          <td>描述</td>
+          <td>Medium baseline: 完成 OBS 與 Youtube 的串流設定</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox5" checked="checked" ></td>
-          <td id='m5'>2</td>
-          <td>描述</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox6" checked="checked" /></td>
-          <td id='m6'>2</td>
-          <td>描述</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox7" checked="checked" /></td>
-          <td id='m7'>2</td>
-          <td>描述</td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox5" checked /></td>
+          <td id='m5'>6</td>
+          <td>Strong baseline: 以講述自身故事為主題進行 Youtube直播, 並以至少7頁的投影片為背景直播時長至少有1分鐘, 並保留直播存檔</td>
         </tr>
       </table>
     </div>
@@ -266,9 +259,12 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
-      </video>
+      <!-- <video id="video1" style="width:100%;max-width:100%;" controls="">
+        <source src="https://youtu.be/tLo8EEiukDw">
+      </video> -->
+      <iframe width="100%" height="500"
+        src="https://www.youtube.com/embed/tLo8EEiukDw">
+      </iframe>
     </div>
   </div>
 
