@@ -29,7 +29,8 @@ body{
 }
 
 .video-view{
-    display: inline-block;
+    /* display: inline-block; */
+    display: none;
 }
 
 .mainbodyArea{
