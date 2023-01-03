@@ -195,21 +195,24 @@
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      <h1>作業 01</h1>
+      <img src="../homepage.png" title="回作業總表" width="50px" height="50px" style="float: right; " onclick="parent.location='../hw00/index.html'">
+      <h1>作業 12</h1>
     </div>
   </div>
 
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      作業程式碼，請放在 src 檔案夾。
+      作業程式碼，請放在 src 檔案夾。<br>
+      (本次作業不用交程式碼, 只需要錄製影片)
     </div>
   </div>
 
   <!-- ------------------------------------------------>
   <div class="row hw12">
     <div class="col-md-12 twenty">
-      心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。心得報告 100 字。
+      這次作業比較難，一次要做好幾個功能。以上一次作業為基底，Medium baseline 需要完成透明背景的設定以及收麥克風音效控制嘴巴開合。
+      Strong baseline 則是需要加入 google mediapipe 的臉部偵測功能，將擷取到的座標點傳回 unity 來控制人物看的方向以及嘴巴開合。
     </div>
   </div>
 
@@ -224,41 +227,27 @@
           <th>分項描述</th>
         </tr>
         <tr>
-          <td rowspan="7" id="myTotal"></td>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox1"></td>
-          <td id='m1'>1</td>
-          <td>描述</td>
+          <td rowspan="7" id="myTotal">10</td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox1" checked></td>
+          <td id='m1'>3</td>
+          <td>Simple Baseline: 角色可以輪播三個以上的動畫</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox2" checked></td>
-          <td id='m2'>1</td>
-          <td>描述</td>
+          <td id='m2'>2</td>
+          <td>Simple Baseline: 麥克風控制角色的嘴巴</td>
         </tr>
         <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox3"></td>
-          <td id='m3'>1</td>
-          <td>描述</td>
+          <td><input type="checkbox" class="flipswitch" id="myCheckbox3" checked></td>
+          <td id='m3'>3</td>
+          <td>Medium Baseline: 將背景變透明後build成執行檔</td>
         </tr>
         <tr>
           <td><input type="checkbox" class="flipswitch" id="myCheckbox4" checked></td>
-          <td id='m4'>1</td>
-          <td>描述</td>
+          <td id='m4'>2</td>
+          <td>Strong Baseline: 能夠將Cubism Unity with MediaPipe順利執行 </td>
         </tr>
-        <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox5" checked="checked" ></td>
-          <td id='m5'>2</td>
-          <td>描述</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox6" checked="checked" /></td>
-          <td id='m6'>2</td>
-          <td>描述</td>
-        </tr>
-        <tr>
-          <td><input type="checkbox" class="flipswitch" id="myCheckbox7" checked="checked" /></td>
-          <td id='m7'>2</td>
-          <td>描述</td>
-        </tr>
+        
       </table>
     </div>
   </div>
@@ -267,7 +256,12 @@
   <div class="row hw12">
     <div class="col-md-12 twenty">
       <video id="video1" style="width:100%;max-width:100%;" controls="">
-        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+        <source src="medium.mp4" type="video/mp4">
+      </video>
+    </div>
+    <div class="col-md-12 twenty">
+      <video id="video2" style="width:100%;max-width:100%;" controls="">
+        <source src="strong.mp4" type="video/mp4">
       </video>
     </div>
   </div>
